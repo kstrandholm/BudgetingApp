@@ -2,7 +2,9 @@
 using Prism;
 using Prism.Ioc;
 using UIKit;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace BudgetingApp.iOS
 {
@@ -20,7 +22,7 @@ namespace BudgetingApp.iOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
+        {            
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
